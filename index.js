@@ -3,12 +3,66 @@ const fs = require('fs')
 const inquirer = require('inquirer');
 
 console.log(fs, inquirer)
+
+const generateHTML = ({ title, installation, usage, license, contributors, tests, github, email }) =>
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="p-5 mb-4 header bg-light">
+    <div class="container">
+      <h1 class="display-4">${title}</h1>
+    </div>
+    <div>
+      <h1 class="display-4">Description</h1>
+        <p>${description}</p>
+    </div>
+    <div>
+      <h1 class="display=4>Installation</h1>
+        <p>${installation}</p>
+    </div>
+    <div>
+      <h1 class="display-4">Usage</h1>
+        <p>${usage}</p>
+    </div>
+      <h1 class="display-4">Contributors</h1>
+        <p>${contributors}</p>
+    <div>
+      <h1 class="display-4">Tests</h1>
+        <p>${tests}</p>
+    </div>
+      <ul class="list-group">
+      <h1 Contact
+        <li class="list-group-item">My GitHub Username: ${github}</li>
+        <li class="list-group-item">My Email: ${email}</li>
+      </ul>
+    </div>
+    <div>
+      <h1 class="display-4">License</h1>
+        <p>${license}</p>
+    </div>
+  </header>
+</body>
+</html>`;
+
+
 // TODO: Create an array of questions for user input
-inquirer.prompt ([
+const questions = inquirer
+  .prompt ([
     {
         name: 'title',
         type: 'input',
         message: 'What is the title of your application?',
+    },
+    {
+        name: 'description',
+        type: 'input',
+        message: 'Describe how your application is used and its purpose:',
     },
     {
         name: 'installation',
@@ -40,22 +94,24 @@ inquirer.prompt ([
     {
         name: 'GitHub',
         type: 'input',
-        message: 'Please enter your GitHub username',
+        message: 'Please enter your GitHub username:',
     },
        
     {
         name: 'email',
         type: 'input',
-        message: 'Please enter your email address with contact instructions'
+        message: 'Please enter your email address with contact instructions:'
     },
 ])
-.then((response) =>
-response.
-? console.log('Success!')
-: console.log('Unsuccessful')
-);
+
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {
+.then((answers) => {
+    const htmlPageContent = generateHTML(answers);
+fs.writeFile('index.html', htmlPageContent, (err) =>
+err ? console.error(err) : console.log("Successfully created 'index.html")
+);
+});
 
 
 // }
