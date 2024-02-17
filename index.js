@@ -1,58 +1,11 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer');
+const generateMarkdown = require('./Utils/generateMarkdown')
 
-console.log(fs, inquirer)
-
-const generateHTML = ({ title, installation, usage, license, contributors, tests, github, email }) =>
-`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <header class="p-5 mb-4 header bg-light">
-    <div class="container">
-      <h1 class="display-4">${title}</h1>
-    </div>
-    <div>
-      <h1 class="display-4">Description</h1>
-        <p>${description}</p>
-    </div>
-    <div>
-      <h1 class="display=4>Installation</h1>
-        <p>${installation}</p>
-    </div>
-    <div>
-      <h1 class="display-4">Usage</h1>
-        <p>${usage}</p>
-    </div>
-      <h1 class="display-4">Contributors</h1>
-        <p>${contributors}</p>
-    <div>
-      <h1 class="display-4">Tests</h1>
-        <p>${tests}</p>
-    </div>
-      <ul class="list-group">
-      <h1 Contact
-        <li class="list-group-item">My GitHub Username: ${github}</li>
-        <li class="list-group-item">My Email: ${email}</li>
-      </ul>
-    </div>
-    <div>
-      <h1 class="display-4">License</h1>
-        <p>${license}</p>
-    </div>
-  </header>
-</body>
-</html>`;
-
-
-// TODO: Create an array of questions for user input
-const questions = inquirer
+//This function defines the questions and initializes the application in the command line, creating a list of licenses for users and a section to display their contact information
+ function init() {
+  inquirer
   .prompt ([
     {
         name: 'title',
@@ -76,7 +29,7 @@ const questions = inquirer
     },
     {
         name: 'license',
-        type: 'checkbox', 
+        type: 'list', 
         message: 'Choose a License',
         choices: ["GPL v3", "ISC", "MIT", "MPL 2.0"],
         
@@ -92,46 +45,25 @@ const questions = inquirer
         message: 'Please describe libraries used for testing software and supply commands:'
     },
     {
-        name: 'GitHub',
+        name: 'contacts',
         type: 'input',
-        message: 'Please enter your GitHub username:',
-    },
-       
-    {
-        name: 'email',
-        type: 'input',
-        message: 'Please enter your email address with contact instructions:'
+          message: 'Please enter your GitHub username:',
+          message: 'Please enter your email address with contact instructions:'
     },
 ])
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-.then((answers) => {
-    const htmlPageContent = generateHTML(answers);
-fs.writeFile('index.html', htmlPageContent, (err) =>
-err ? console.error(err) : console.log("Successfully created 'index.html")
-);
-});
+
+// This function takes user responses and calls on the generateMarkdown.js to create new README in Output file
+ .then((responses) => {
+     const markdown = generateMarkdown(responses)
+
+     fs.writeFile('./Output/README.md', markdown, (err) => 
+     err ? console.log(err) : console.log('Successfully created README.md')
+     );
+   });
+ }
+
+ init();
 
 
-// }
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
-
-// Title of project
-
-// Sections:
-// Description 
-// Table of contents
-// installation 
-// usage
-// License
-// Contributing
-// tests
-// questions
 
