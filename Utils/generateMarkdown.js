@@ -6,8 +6,9 @@ function renderLicenseBadge(license) {
     '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
   } else if (license === 'ISC') {
     '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC'
-  } else 
+  } else {
     '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+  }
 }
 
 
@@ -32,7 +33,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-## Licaense
+## License
 ${data.license}
 
 ## Contributors
@@ -41,8 +42,9 @@ ${data.contributors}
 ## Tests
 ${data.tests}
 
-## Contacts
+## Contact Information
   ${data.GitHub}
+
   ${data.email}
 `;
 }

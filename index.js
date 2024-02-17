@@ -45,10 +45,15 @@ const generateMarkdown = require('./Utils/generateMarkdown')
         message: 'Please describe libraries used for testing software and supply commands:'
     },
     {
-        name: 'contacts',
+        name: 'GitHub',
         type: 'input',
-          message: 'Please enter your GitHub username:',
-          message: 'Please enter your email address with contact instructions:'
+        message: 'Please enter your GitHub username:',
+        
+    },
+    { 
+        name: 'email',
+        type: 'input',
+        message: 'Please enter your email address with contact instructions:'
     },
 ])
 
