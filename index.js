@@ -47,7 +47,7 @@ const generateMarkdown = require('./Utils/generateMarkdown')
     {
         name: 'GitHub',
         type: 'input',
-        message: 'Please enter your GitHub username:',
+        message: 'Please enter your GitHub username with instructions:',
         
     },
     { 

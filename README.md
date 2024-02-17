@@ -34,7 +34,7 @@ Tutoring assistance from Chris Baird.
 Tutorials on node.js from NetNinja using this YouTube playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU
 
 ## Tests
-None
+N/A
 
 ## Contact Information
   GitHub Username: Jbrockhoff
