@@ -24,7 +24,7 @@ ${data.description}
 3. [License](#license)
 4. [Contributors](#contributors)
 5. [Tests](#tests)
-6. [Contact Information](#github)(#email)
+6. [Questions?](#questions)
 
 ## Installation
 ${data.installation}
@@ -41,10 +41,9 @@ ${data.contributors}
 ## Tests
 ${data.tests}
 
-## Contact Information
-  ${data.GitHub}
+## Questions?
+${data.questions}
 
-  ${data.email}
 `;
 }
 
