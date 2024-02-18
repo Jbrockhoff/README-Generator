@@ -19,12 +19,20 @@ User will also have to initiate the inquirer package by running 'npm install inq
 Software developers will be able to use this application for use when developing a README file by responding to generated prompts.
 
 
-Here is a video of the application functioning:
+Here is a link to video of the application functioning:
+https://drive.google.com/file/d/1mL6oPa6-QGGAL1SaRrXaQPb41pgsZj9C/view
 
 Here are screenshots of the application:
+![generator1.png](./assets/generator1.png)
+![generator2.png](./assets/generator2.png)
+![generator3.png](./assets/generator3.png)
+![generator4.png](./assets/generator4.png)
+![generator5.png](./assets/generator5.png)
 
+Here is a link to my GitHub profile:
+https://github.com/Jbrockhoff
 
-Here is a link to the GitHub repository for this application:
+Here is a link to the GitHub Repositroy for this application:
 https://github.com/Jbrockhoff/README-Generator
 
 ## License
