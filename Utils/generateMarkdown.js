@@ -42,7 +42,7 @@ ${data.contributors}
 ${data.tests}
 
 ## Questions?
-${data.questions.message}
+${data.questions}
 `;
 }
 
