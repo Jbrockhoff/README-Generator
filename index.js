@@ -44,15 +44,11 @@ function init() {
         message: "Please describe libraries used for testing software and supply commands:",
       },
       {
-        name: "questions1",
+        name: "questions",
         type: "input",
-        message: "Please enter your GitHub username with instructions:",
+        message: "Please enter your GitHub username and email address with instructions:",
       },
-      {
-        name: "questions2",
-        type: "input",
-        message: "Please enter your email address with instructions:",
-      },
+      
     ])
 
     // This function takes user responses and calls on the generateMarkdown.js to create new README in Output file

@@ -42,9 +42,7 @@ ${data.contributors}
 ${data.tests}
 
 ## Questions?
-${data.questions1}
-${data.questions1}
-
+${data.questions}
 `;
 }
 
