@@ -24,7 +24,7 @@ ${data.description}
 3. [License](#license)
 4. [Contributors](#contributors)
 5. [Tests](#tests)
-6. [Questions?](#questions)
+6. [Questions?](#question)
 
 ## Installation
 ${data.installation}
@@ -42,7 +42,7 @@ ${data.contributors}
 ${data.tests}
 
 ## Questions?
-${data.questions}
+${data.questions.message}
 `;
 }
 

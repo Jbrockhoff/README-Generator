@@ -9,7 +9,7 @@ This application takes user input to relevant, typical README.md criteria and us
 3. [License](#license)
 4. [Contributors](#contributors)
 5. [Tests](#tests)
-6. [Contact Information](#contacts)
+6. [Questions?](#questions)
 
 ## Installation
 User will need to install Node.js using the following website: https://nodejs.org/en/download. The LTS version is recommmeded.
@@ -53,7 +53,7 @@ Tutorials on node.js from NetNinja using this YouTube playlist: https://www.yout
 ## Tests
 N/A
 
-## Contact Information
+## Questions?
   GitHub Username: Jbrockhoff
 
   Email Address: jbrockh1@gmail.com

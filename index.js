@@ -21,6 +21,7 @@ function init() {
         name: "installation",
         type: "input",
         message: "What is required to run your application locally?",
+        default: "npm i"
       },
       {
         name: "usage",
@@ -46,9 +47,8 @@ function init() {
       {
         name: "questions",
         type: "input",
-        message: "Please enter your GitHub username and email address with instructions:",
-      },
-      
+        message: "Please enter your GitHub username and your email address with instructions:",
+      },  
     ])
 
     // This function takes user responses and calls on the generateMarkdown.js to create new README in Output file
